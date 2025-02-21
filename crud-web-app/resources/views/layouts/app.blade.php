@@ -32,5 +32,8 @@
     <main>
         @yield('content')
     </main>
+    <footer class="bg-primary text-white text-center fixed-bottom py-3">
+        <p>&copy; Student Management System 2025</p>
+    </footer>
 </body>
 </html>
