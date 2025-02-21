@@ -14,10 +14,18 @@
         <h1 class="bg-primary text-white p-4">Student Management System</h1>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <ul class="navbar-nav">
-                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/manage" class="nav-link">Manage</a></li>
-                <li class="nav-item"><a href="/search" class="nav-link">Search</a></li>
-                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                <li class="nav-item">
+                    <a href="/" class="nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/manage" class="nav-link {{ request()->is('manage') ? 'active' : '' }}">Manage</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/search" class="nav-link {{ request()->is('search') ? 'active' : '' }}">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link {{ request()->is('about') ? 'active' : '' }}">About</a>
+                </li>
             </ul>
         </nav>
     </header>
