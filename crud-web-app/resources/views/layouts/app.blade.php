@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Student Management System</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="bg-primary text-white p-4">Student Management System</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/manage" class="nav-link">Manage</a></li>
+                <li class="nav-item"><a href="/search" class="nav-link">Search</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        @yield('content')
+    </main>
+</body>
+</html>
