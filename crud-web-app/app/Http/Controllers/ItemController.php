@@ -16,14 +16,14 @@ class ItemController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        /* $request->validate([
             'name' => 'required',
             'description' => 'required',
             'product_code' => 'required|unique:items',
             'price' => 'required',
         ]);
 
-        Item::create($request->all());
+        Item::create($request->all()); */
         return redirect()->route('manage')->with('success', 'Item created successfully');
     }
 }

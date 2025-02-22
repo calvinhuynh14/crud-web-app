@@ -7,7 +7,9 @@
     </div>
 
     <div class="d-flex justify-content-end mt-4">
-        <a href="{{ route('manage', ['showForm' => true]) }}" class="btn btn-primary">Add New Item</a>
+        @if(!$showForm)
+            <a href="{{ route('manage', ['showForm' => true]) }}" class="btn btn-primary">Add New Item</a>
+        @endif
     </div>
     
     <div class="mt-2">
@@ -39,8 +41,32 @@
     </div>
 
     @if($showForm)
-        <div class="mt-4">
-            <h2>Add New Item</h2>
+        <div class="container py-4">
+            <h3>Add New Item</h3>
+            <form action="{{ route('manage.store') }}" method="post" class="form-group">
+                @csrf
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="product_code">Product Code</label>
+                            <input type="text" class="form-control" id="product_code" name="product_code">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="price">Price</label>
+                            <input type="text" class="form-control" id="price" name="price">
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" name="description"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Add Item</button>
+            </form>
         </div>
     @endif
 </div>
