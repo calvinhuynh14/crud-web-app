@@ -8,6 +8,8 @@ Route::get('/', function () {
 
 Route::get('/manage', [ItemController::class, 'index'])->name('manage');
 Route::post('/manage', [ItemController::class, 'store'])->name('manage.store');
+Route::put('/manage/{id}', [ItemController::class, 'update'])->name('manage.update');
+Route::delete('/manage/{id}', [ItemController::class, 'destroy'])->name('manage.destroy');
 
 Route::get('/search', function () {
     return view('search');
