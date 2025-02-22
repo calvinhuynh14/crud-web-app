@@ -6,11 +6,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/manage', function () {
-    return view('manage');
-});
-
 Route::get('/manage', [ItemController::class, 'index'])->name('manage');
+Route::post('/manage', [ItemController::class, 'store'])->name('items.store');
 
 Route::get('/search', function () {
     return view('search');
