@@ -22,16 +22,20 @@ class SearchController extends Controller
         $query = DB::table('items');
 
         if ($searchTerm) {
-            $query->where('name', 'like', '%' . $searchTerm . '%')
-                ->orWhere('description', 'like', '%' . $searchTerm . '%')
-                ->orWhere('product_code', 'like', '%' . $searchTerm . '%');
+            $query->where(function($query) use ($searchTerm) {
+                $query->where('name', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('description', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('product_code', 'like', '%' . $searchTerm . '%');
+            });
         }
 
-        if ($low) {
+        if ($low && $high) {
+            $query->whereBetween('price', [$low, $high]);
+        }
+        elseif ($low) {
             $query->where('price', '>=', $low);
         }
-
-        if ($high) {
+        elseif ($high) {
             $query->where('price', '<=', $high);
         }
 
