@@ -16,7 +16,7 @@ class SearchController extends Controller
     public function search(Request $request)
     {
         $searchTerm = $request->input('search');
-        //$low = $request->input('low');
+        $low = $request->input('low');
         //$high = $request->input('high');
 
         $query = DB::table('items');
@@ -26,6 +26,11 @@ class SearchController extends Controller
                 ->orWhere('description', 'like', '%' . $searchTerm . '%')
                 ->orWhere('product_code', 'like', '%' . $searchTerm . '%');
         }
+
+        if ($low) {
+            $query->where('price', '>=', $low);
+        }
+
 
         $items = $query->get();
         return view('search', ['items' => $items]);

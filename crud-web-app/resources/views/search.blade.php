@@ -13,11 +13,11 @@
                     <label for="search">Search</label>
                     <input type="text" class="form-control" id="search" name="search">
                 </div>
-                <!-- <div class="col-md-2">
+                <div class="col-md-2">
                     <label for="low">Low</label>
                     <input type="number" class="form-control" id="low" name="low">
                 </div>
-                <div class="col-md-2">
+                <!-- <div class="col-md-2">
                     <label for="high">High</label>
                     <input type="number" class="form-control" id="high" name="high">
                 </div> -->
