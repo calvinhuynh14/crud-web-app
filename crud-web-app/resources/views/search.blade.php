@@ -17,10 +17,10 @@
                     <label for="low">Low</label>
                     <input type="number" class="form-control" id="low" name="low">
                 </div>
-                <!-- <div class="col-md-2">
+                <div class="col-md-2">
                     <label for="high">High</label>
                     <input type="number" class="form-control" id="high" name="high">
-                </div> -->
+                </div>
                 <button type="submit" class="btn btn-primary col-md-2 mt-3">Search</button>
             </div>
         </form>

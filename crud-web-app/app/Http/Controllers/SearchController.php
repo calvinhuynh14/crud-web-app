@@ -17,7 +17,7 @@ class SearchController extends Controller
     {
         $searchTerm = $request->input('search');
         $low = $request->input('low');
-        //$high = $request->input('high');
+        $high = $request->input('high');
 
         $query = DB::table('items');
 
@@ -31,6 +31,9 @@ class SearchController extends Controller
             $query->where('price', '>=', $low);
         }
 
+        if ($high) {
+            $query->where('price', '<=', $high);
+        }
 
         $items = $query->get();
         return view('search', ['items' => $items]);
