@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-4">
     <div class="text-center">
-        <h2>Search Students</h2>
+        <h2>Search Inventory</h2>
     </div>
 
     <div class="d-flex justify-content-center">

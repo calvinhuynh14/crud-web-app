@@ -29,13 +29,12 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="container" style="padding-bottom: 80px;">
-            @yield('content')
-        </div>
+    <main style="padding-bottom: 80px;">
+        @yield('content')
+
     </main>
     <footer class="bg-primary text-white text-center fixed-bottom">
-        <p>&copy; Student Management System 2025</p>
+        <p>&copy; Inventory Management System 2025</p>
     </footer>
 </body>
 </html>
