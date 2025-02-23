@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-4">
     <div class="text-center">
-        <h2>Manage Students</h2>
+        <h2>Manage Inventory</h2>
     </div>
 
     <div class="d-flex justify-content-end mt-4">

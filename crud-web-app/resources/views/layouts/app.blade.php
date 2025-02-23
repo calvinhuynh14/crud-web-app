@@ -6,12 +6,12 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Student Management System</title>
+    <title>Inventory Management System</title>
 </head>
 
 <body>
     <header>
-        <h1 class="bg-primary text-white p-4">Student Management System</h1>
+        <h1 class="bg-primary text-white p-4">Inventory Management System</h1>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -30,9 +30,11 @@
         </nav>
     </header>
     <main>
-        @yield('content')
+        <div class="container" style="padding-bottom: 80px;">
+            @yield('content')
+        </div>
     </main>
-    <footer class="bg-primary text-white text-center fixed-bottom py-3">
+    <footer class="bg-primary text-white text-center fixed-bottom">
         <p>&copy; Student Management System 2025</p>
     </footer>
 </body>
