@@ -11,9 +11,7 @@ Route::post('/manage', [ItemController::class, 'store'])->name('manage.store');
 Route::put('/manage/{id}', [ItemController::class, 'update'])->name('manage.update');
 Route::delete('/manage/{id}', [ItemController::class, 'destroy'])->name('manage.destroy');
 
-Route::get('/search', function () {
-    return view('search');
-});
+Route::get('/search', [ItemController::class, 'search'])->name('search');
 
 Route::get('/about', function () {
     return view('about');
