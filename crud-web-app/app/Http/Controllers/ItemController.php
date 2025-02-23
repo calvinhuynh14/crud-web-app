@@ -50,9 +50,4 @@ class ItemController extends Controller
         return redirect()->route('manage')->with('success', 'Item deleted successfully');
     }
 
-    public function search(Request $request)
-    {
-        return view('search');
-    }
-
 }
